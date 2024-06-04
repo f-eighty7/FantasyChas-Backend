@@ -35,7 +35,7 @@ jobs:
         working-directory: terraform
         
       - name: Terraform Destroy VM
-        run: terraform destroy -target=azurerm_linux_virtual_machine.vm -auto-approve  -var="connection_string=${{ secrets.CONNECTION_STRING }}" -var="openai_key=${{ secrets.OPENAI_KEY }}"
+        run: terraform destroy -auto-approve  -var="connection_string=${{ secrets.CONNECTION_STRING }}" -var="openai_key=${{ secrets.OPENAI_KEY }}"
         env:
           ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
