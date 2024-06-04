@@ -203,7 +203,7 @@ resource "azurerm_mssql_server" "mssql-server" {
   location                     = azurerm_resource_group.rg.location
   version                      = "12.0"
   administrator_login          = "sqladmin"
-  administrator_login_password = var.sql_password
+  administrator_login_password = "YourStrong@Passw0rd"
 }
 resource "azurerm_mssql_database" "mssql-db" {
   name           = "fantasychas-db"
